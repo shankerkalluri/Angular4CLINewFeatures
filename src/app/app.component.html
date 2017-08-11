@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div style="text-align:center;">
+//ng-template 
+// Angular 4 else statement 
+<br/><br/>    
+<button (click)="showFirst=!showFirst">Toggle Visible</button>
+<p *ngIf="showFirst; else elsePart">You can either see this paragraph</p>
+<ng-template #elsePart>
+    <p>..or this one</p>
+</ng-template>
+    
+</div>
+<hr>
+//Angular 4 Renderer2
+<div #myElement style="text-align:center;">
+<button (click)="onChangeBackground(myElement)">Change Background</button>
+</div>
+<hr>
+//Angular 4 Email Validator    
+ <form #f="ngForm">
+        <input type="email" 
+               ngModel
+               name="email" 
+               required  
+               email>
+        <button [disabled]="!f.valid">Submit</button>
+        <p>Form State: {{ f.valid ? 'VALID' : 'INVALID'}}</p>
+ </form>
+<hr>
+//Angular4 Animations
+<div #state>
+<button (click)="onChangeBackground(state)">Change to Final</button>
+</div>
+
+   
+
+
+
